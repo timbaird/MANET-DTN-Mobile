@@ -1,6 +1,15 @@
-﻿<Properties StartupConfiguration="{6617CA7E-E716-4F3E-B3F5-68BA6794468D}|Default">
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupConfiguration="{548D3D7D-3619-41A8-8F6B-EC0C38ADA9A6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MANET_DTN_Mobile/Views/DataView.xaml.cs">
+    <Files>
+      <File FileName="MANET_DTN_Mobile/Views/InboxView.xaml" Line="6" Column="1" />
+      <File FileName="MANET_DTN_Mobile/Views/InboxView.xaml.cs" Line="19" Column="1" />
+      <File FileName="MANET_DTN_Mobile/Views/DataView.xaml.cs" Line="19" Column="38" />
+      <File FileName="MANET_DTN_Mobile/Models/Item.cs" Line="28" Column="55" />
+      <File FileName="MANET_DTN_Mobile/DataAccess/LocalDBHandler.cs" Line="52" Column="49" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MANET__DTN__Mobile.Droid PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

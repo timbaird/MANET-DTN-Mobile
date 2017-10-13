@@ -8,7 +8,7 @@ namespace MANET_DTN_Mobile
         {
             InitializeComponent();
 
-            MainPage = new MANET_DTN_MobilePage();
+            MainPage = new NavigationPage(new MainMenuView());
         }
 
         protected override void OnStart()

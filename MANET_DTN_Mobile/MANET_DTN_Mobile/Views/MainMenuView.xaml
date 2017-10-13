@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage    Title="Home"
+                xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                xmlns:local="clr-namespace:MANET_DTN_Mobile" 
+                x:Class="MANET_DTN_Mobile.MainMenuView">
+    <StackLayout>
+        <Button Text="Inbox" Clicked="Handle_Button_Inbox_Clicked"/>
+        <Button Text="Sent Messages" Clicked="Handle_Button_Sent_Messages_Clicked"/>
+        <Button Text="New Message" Clicked="Handle_Button_New_Message_Clicked"/>
+        <Button Text="View Data" Clicked="Handle_Button_View_Data_Clicked"/>
+        <Button Text="Create Data" Clicked="Handle_Button_Create_Data_Clicked"/>
+    </StackLayout>
+
+    
+</ContentPage>

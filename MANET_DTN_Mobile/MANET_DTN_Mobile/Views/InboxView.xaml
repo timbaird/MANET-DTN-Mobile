@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    Title="Inbox"
+                xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                x:Class="MANET_DTN_Mobile.Views.InboxView">
+	<ListView x:Name="ListViewInbox">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Path=OriginatorId, StringFormat='Sender:   {0}'}" 
+                          Detail="{Binding Path=Title, StringFormat='Subject:    {0}'}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
