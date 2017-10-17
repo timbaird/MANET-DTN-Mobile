@@ -3,7 +3,7 @@
                 xmlns="http://xamarin.com/schemas/2014/forms" 
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                 x:Class="MANET_DTN_Mobile.Views.InboxView">
-	<ListView x:Name="ListViewInbox">
+	<ListView x:Name="ListViewInbox" ItemSelected="Handle_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Path=OriginatorId, StringFormat='Sender:   {0}'}" 

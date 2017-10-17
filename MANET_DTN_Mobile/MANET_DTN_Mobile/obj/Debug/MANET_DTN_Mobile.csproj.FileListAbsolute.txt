@@ -21,3 +21,11 @@
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.DataView.xaml.g.cs
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.CreateMessageView.xaml.g.cs
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.CreateDataView.xaml.g.cs
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLite-net.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLitePCLRaw.batteries_green.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLitePCLRaw.batteries_v2.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLitePCLRaw.core.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLite-net.pdb
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLite-net.xml
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.DataDetailView.xaml.g.cs
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.MessageDetailsView.xaml.g.cs

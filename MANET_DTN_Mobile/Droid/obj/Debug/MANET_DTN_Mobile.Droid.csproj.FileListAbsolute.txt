@@ -49,3 +49,11 @@
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/Xamarin.Forms.Core.dll.mdb
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/Xamarin.Forms.Platform.Android.dll.mdb
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLite-net.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLitePCLRaw.batteries_green.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLitePCLRaw.batteries_v2.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLitePCLRaw.core.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLitePCLRaw.lib.e_sqlite3.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLitePCLRaw.provider.e_sqlite3.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLite-net.pdb
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/Droid/bin/Debug/SQLite-net.xml

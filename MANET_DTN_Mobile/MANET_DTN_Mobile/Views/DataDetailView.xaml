@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    Title="{Binding ItemType}"
+                xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                x:Class="MANET_DTN_Mobile.Views.DataDetailView">
+    <StackLayout>  
+    <Label Text="{Binding Path=OriginatorId, StringFormat='Originator:   {0}'}"/> 
+    <Label Text="{Binding Path=DateTimeCreated, StringFormat='Created Date:   {0}'}"/>   
+    <Label Text="{Binding Path=Title, StringFormat='Title:   {0}'}"/> 
+    <Label Text="{Binding Path=Body, StringFormat='Body:   {0}'}"/>  
+    </StackLayout>
+</ContentPage>

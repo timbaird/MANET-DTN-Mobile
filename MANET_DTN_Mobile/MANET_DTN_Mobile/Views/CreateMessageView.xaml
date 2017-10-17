@@ -3,7 +3,12 @@
                 xmlns="http://xamarin.com/schemas/2014/forms" 
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                 x:Class="MANET_DTN_Mobile.Views.CreateMessageView">
-	<ContentPage.Content>
-        <Label Text="Create Message View"/>
-	</ContentPage.Content>
+
+    <StackLayout>
+        <Entry Keyboard="Text" Placeholder="Recipient" x:Name="entryRecipient"/>
+        <Entry Keyboard="Text" Placeholder="Subject" x:Name="entrySubject"/>
+        <Editor Keyboard="Text" VerticalOptions="FillAndExpand" x:Name="editorMessage"/>
+        <Button Text="Send" Clicked="Handle_Button_Send_Clicked" />
+    </StackLayout>
+    
 </ContentPage>

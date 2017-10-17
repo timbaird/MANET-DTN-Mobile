@@ -3,6 +3,8 @@ using MANET_DTN_Mobile.Controllers;
 using MANET_DTN_Mobile.Models;
 using MANET_DTN_Mobile.DataAccess;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace MANET_DTN_Mobile.Tests
 {
@@ -39,24 +41,10 @@ namespace MANET_DTN_Mobile.Tests
         }
     }
 
-    public class StubLocalDBhandler : ILocalDBHandler
+    /*
+    public class StubLocalDBHandler : ILocalDBHandler
     {
         public void DeleteItem(Item pItem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Item GetItemById(string pItemId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Item> GetItemIdsToPull(List<Item> pInputList)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Item> GetItemIdsToPush(List<Item> pInputList)
         {
             throw new NotImplementedException();
         }
@@ -89,6 +77,21 @@ namespace MANET_DTN_Mobile.Tests
                          "consequat. Duis aute irure dolor in reprehenderit in voluptate ",
                          Convert.ToDateTime("10/05/2017"), "NORMAL")
             };
+        }
+
+        public Item GetItemById(string pItemId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<string> GetItemIdsToPull(List<Item> pInputList)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<string> GetItemIdsToPush(List<Item> pInputList)
+        {
+            throw new NotImplementedException();
         }
 
         public DateTime GetLastSync(string pThrowboxId)
@@ -139,19 +142,21 @@ namespace MANET_DTN_Mobile.Tests
             throw new NotImplementedException();
         }
 
-        public List<RemoveFlag> GetRemoveFlagIdsToPull(List<RemoveFlag> pInputList)
+        public List<string> GetRemoveFlagIdsToPull(List<RemoveFlag> pInputList)
         {
             throw new NotImplementedException();
         }
 
-        public List<RemoveFlag> GetRemoveFlagIdsToPush(List<RemoveFlag> pInputList)
+        public List<string> GetRemoveFlagIdsToPush(List<RemoveFlag> pInputList)
         {
             throw new NotImplementedException();
         }
 
-        public List<Item> GetSentMessages()
+        public Task<ObservableCollection<Item>> GetSentMessages()
         {
-            return new List<Item>{
+            throw new NotImplementedException();
+
+                        return new List<Item>{
 
                 new Item("610438000000_1", "MESSAGE", "610438000000", "61438111116",
                          "Be Home For Dinner", "Lorem ipsum dolor sit amet, consectetur " +
@@ -184,7 +189,13 @@ namespace MANET_DTN_Mobile.Tests
                          "exercitation ullamco laboris nisi ut aliquip ex ea commodo " +
                          "consequat. Duis aute irure dolor in reprehenderit in voluptate ",
                          Convert.ToDateTime("05/05/2017"), "NORMAL")
-            };
+            }
+         
+        }
+
+        public void GetSentMessages(List<Item> pMessages)
+        {
+            throw new NotImplementedException();
         }
 
         public void LogSyncComplete()
@@ -206,7 +217,9 @@ namespace MANET_DTN_Mobile.Tests
         {
             throw new NotImplementedException();
         }
+
     }
+    */
 
 
 }

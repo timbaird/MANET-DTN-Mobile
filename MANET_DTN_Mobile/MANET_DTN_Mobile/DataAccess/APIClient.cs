@@ -21,6 +21,7 @@ namespace MANET_DTN_Mobile.DataAccess
 
         public APIClient(string pURL)
         {
+            url = pURL;
         }
 
         public List<string> GetItemIds()

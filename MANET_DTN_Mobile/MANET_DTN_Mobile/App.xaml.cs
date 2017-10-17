@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using MANET_DTN_Mobile.DataAccess;
 
 namespace MANET_DTN_Mobile
 {
@@ -14,6 +15,7 @@ namespace MANET_DTN_Mobile
         protected override void OnStart()
         {
             // Handle when your app starts
+            LocalDBHandler.CreateDatabaseIfNeeded();
         }
 
         protected override void OnSleep()
