@@ -8,38 +8,12 @@ using System.Collections.ObjectModel;
 
 namespace MANET_DTN_Mobile.Tests
 {
+    /*
     public class StubAPIClient : IAPIClient
     {
-        public List<string> GetItemIds()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<string> GetRemoveFlagIds()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Item PullItem(string pItemId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public RemoveFlag PullRemoveFlag(string pFlagId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PushItem(Item pItem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PushRemoveFlag(RemoveFlag pFlag)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
+    */
 
     /*
     public class StubLocalDBHandler : ILocalDBHandler

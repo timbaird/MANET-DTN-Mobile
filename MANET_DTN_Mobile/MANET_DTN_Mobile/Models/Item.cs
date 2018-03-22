@@ -36,7 +36,7 @@ namespace MANET_DTN_Mobile.Models
         }
 
         public Item(string pItemId, string pItemType, string pOriginatorId, string pRecipientId, string pTitle, string pBody,
-                    DateTime pDateTimeCreated, string pPrioirity){
+                    DateTime pDateTimeCreated, string pPriority){
             ItemId = pItemId;
             ItemType = pItemType;
             OriginatorId = pOriginatorId;
@@ -44,7 +44,18 @@ namespace MANET_DTN_Mobile.Models
             Title = pTitle;
             Body = pBody;
             DateTimeCreated = pDateTimeCreated;
-            Priority = Priority;
+            Priority = pPriority;
+        }
+
+        public string ToJson()
+        {
+            // return string.Format("[Item: ItemId={0}, ItemType={1}, OriginatorId={2}, RecipientId={3}, Title={4}, Body={5}, DateTimeCreated={6}, Priority={7}]", ItemId, ItemType, OriginatorId, RecipientId, Title, Body, DateTimeCreated, Priority);
+            var serialised = string.Format("'ItemId':'{0}', 'ItemType':'{1}', 'OriginatorId':'{2}'," +
+                                           " 'RecipientId':'{3}', 'Title':'{4}', 'Body':'{5}', 'DateTimeCreated':'{6}', 'Priority':'{7}'",
+                                           ItemId, ItemType, OriginatorId, RecipientId, Title, Body, DateTimeCreated, Priority);
+
+
+            return "{" + serialised + "}";
         }
     }
 }

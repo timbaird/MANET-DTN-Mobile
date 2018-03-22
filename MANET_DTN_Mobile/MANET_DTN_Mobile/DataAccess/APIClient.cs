@@ -1,57 +1,91 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using MANET_DTN_Mobile.Models;
+using ModernHttpClient;
+using Newtonsoft;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace MANET_DTN_Mobile.DataAccess
 {
 
     public interface IAPIClient{
-        List<string> GetItemIds();
-        List<string> GetRemoveFlagIds();
-        Item PullItem(string pItemId);
-        RemoveFlag PullRemoveFlag(string pFlagId);
-        void PushItem(Item pItem);
-        void PushRemoveFlag(RemoveFlag pFlag);
+        Task<List<ItemID>> GetItemIds();
+        Task<List<RemoveFlagID>> GetRemoveFlagIds();
+        Task<Item> PullItem(string pItemId);
+        Task<RemoveFlag> PullRemoveFlag(string pFlagId);
+        Task<HttpResponseMessage> PushItem(Item pItem);
+        Task<HttpResponseMessage> PushRemoveFlag(RemoveFlag pFlag);
+        Task<string> GetThrowBoxId();
     }
 
 
     public class APIClient: IAPIClient
     {
-        private string url;
-
-        public APIClient(string pURL)
+        private HttpClient client;
+      
+        public APIClient()
         {
-            url = pURL;
+            client = new HttpClient();
+            client.BaseAddress = new Uri(NodeData.GetApiBaseUrl());
         }
 
-        public List<string> GetItemIds()
+        public async Task<List<ItemID>> GetItemIds()
         {
-            throw new NotImplementedException();
+            var vResponseAsync = await client.GetAsync("/api/itemIDLists/").ConfigureAwait(false);
+            var vJsonAsString = await vResponseAsync.Content.ReadAsStringAsync();
+            var vDeserialized = JsonConvert.DeserializeObject<List<ItemID>>(vJsonAsString);
+            return vDeserialized;
         }
 
-        public List<string> GetRemoveFlagIds()
+        public async Task<List<RemoveFlagID>> GetRemoveFlagIds()
         {
-            throw new NotImplementedException();
+            var vResponseAsync = await client.GetAsync("/api/removeIDLists").ConfigureAwait(false);
+            var vJsonAsString = await vResponseAsync.Content.ReadAsStringAsync();
+            var vDeserialized = JsonConvert.DeserializeObject<List<RemoveFlagID>>(vJsonAsString);
+            return vDeserialized;
         }
 
-        public Item PullItem(string pItemId)
+        public async Task<string> GetThrowBoxId()
         {
-            throw new NotImplementedException();
+            var vResponseAsync = await client.GetAsync("/api/nodeId").ConfigureAwait(false);
+            var vJsonAsString = await vResponseAsync.Content.ReadAsStringAsync();
+            var vDeserialized = JsonConvert.DeserializeObject<string>(vJsonAsString);
+            return vDeserialized;
         }
 
-        public RemoveFlag PullRemoveFlag(string pFlagId)
+        public async Task<Item> PullItem(string pItemId)
         {
-            throw new NotImplementedException();
+            var vResponseAsync = await client.GetAsync("/api/items/" + pItemId).ConfigureAwait(false);
+            var vJsonAsString = await vResponseAsync.Content.ReadAsStringAsync();
+            var vDeserialized = JsonConvert.DeserializeObject<Item>(vJsonAsString);
+            return vDeserialized;
         }
 
-        public void PushItem(Item pItem)
+        public async Task<RemoveFlag> PullRemoveFlag(string pFlagId)
         {
-            throw new NotImplementedException();
+            var vResponseAsync = await client.GetAsync("/api/removeFlags/" + pFlagId).ConfigureAwait(false);
+            var vJsonAsString = await vResponseAsync.Content.ReadAsStringAsync();
+            var vDeserialized = JsonConvert.DeserializeObject<RemoveFlag>(vJsonAsString);
+            return vDeserialized;
         }
 
-        public void PushRemoveFlag(RemoveFlag pFlag)
+        public async Task<HttpResponseMessage> PushItem(Item pItem)
         {
-            throw new NotImplementedException();
+            var data = new StringContent(pItem.ToJson(), Encoding.UTF8, "application/json");
+            var vResponseAsync = await client.PostAsync("/api/items/", data).ConfigureAwait(false);
+            return vResponseAsync;
+        }
+
+        public async Task<HttpResponseMessage> PushRemoveFlag(RemoveFlag pFlag)
+        {
+            var data = new StringContent(pFlag.ToJson(), Encoding.UTF8, "application/json");
+            var vResponseAsync = await client.PostAsync("/api/removeFlags/", data).ConfigureAwait(false);
+            return vResponseAsync;
         }
     }
 }

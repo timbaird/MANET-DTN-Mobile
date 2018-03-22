@@ -23,6 +23,8 @@
 	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/MANET_DTN_Mobile.dll' \
 	-r \
+	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/modernhttpclient.2.4.2/lib/Xamarin.iOS10/ModernHttpClient.dll' \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll' \
@@ -327,6 +329,8 @@
 	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/MANET_DTN_Mobile.dll' \
 	-r \
+	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/modernhttpclient.2.4.2/lib/Xamarin.iOS10/ModernHttpClient.dll' \
+	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll' \
 	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/SQLitePCLRaw.bundle_green.1.1.5/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll' \
@@ -344,6 +348,8 @@
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/Xamarin.Forms.2.4.0.280/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll' \
 	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/Xamarin.Forms.2.4.0.280/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll' \
+	-r \
+	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/Newtonsoft.Json.dll' \
 	-r \
 	'/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/packages/Xamarin.Forms.2.4.0.280/lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll' \
 	-r \

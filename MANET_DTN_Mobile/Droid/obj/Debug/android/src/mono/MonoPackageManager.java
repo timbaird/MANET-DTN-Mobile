@@ -108,6 +108,9 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "MANET_DTN_Mobile.Droid.dll" comes first in this list. */
 		"MANET_DTN_Mobile.Droid.dll",
 		"FormsViewGroup.dll",
+		"MANET_DTN_Mobile.dll",
+		"ModernHttpClient.dll",
+		"OkHttp.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
@@ -134,7 +137,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
-		"MANET_DTN_Mobile.dll",
+		"Newtonsoft.Json.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

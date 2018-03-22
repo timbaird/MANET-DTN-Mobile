@@ -5,10 +5,11 @@ namespace MANET_DTN_Mobile.Models
 {
     public class TransferLog
     {
-
-        [Indexed(Name = "TransferCompPK", Order = 1, Unique = true), MaxLength(30)]
+        [PrimaryKey, AutoIncrement]
+        public int TransferId { set; get; }
+        [MaxLength(30)]
         public string ItemId { set; get; }
-        [Indexed(Name = "TransferCompPK", Order = 2, Unique = true), MaxLength(1)]
+        [MaxLength(1)]
         public int IsRemoveFlag { set; get; }
         [MaxLength(30)]
         public string TransToId { set; get; }

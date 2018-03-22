@@ -5,140 +5,153 @@ using System.Threading.Tasks;
 using MANET_DTN_Mobile.Models;
 using SQLite;
 using Xamarin.Forms;
-
+using System.Linq;
 
 namespace MANET_DTN_Mobile.DataAccess
 {
     public interface ILocalDBHandler
     {
-        void DeleteItem(Item pItem);
+        // for syncing
+        List<Item> GetAllItems();
+        List<RemoveFlag> GetAllFlags();
+
+        // for use on mobile app
         ObservableCollection<Item> GetData();
-        Item GetItemById(string pItemId);
-        List<string> GetItemIdsToPush(List<Item> pInputList);
-        List<string> GetItemIdsToPull(List<Item> pInputList);
-        DateTime GetLastSync(string pThrowboxId);
         ObservableCollection<Item> GetReceivedMessages();
         ObservableCollection<Item> GetSentMessages();
 
-        RemoveFlag GetRemoveFlagById(string pFlagId);
-        List<string> GetRemoveFlagIdsToPush(List<RemoveFlag> pInputList);
-        List<string> GetRemoveFlagIdsToPull(List<RemoveFlag> pInputList);
+        // for logging
         void LogSyncStarted();
         void LogSyncComplete();
-        void SaveItem(Item pItem);
-        void SaveRemoveFlag(RemoveFlag pFlag);
+        DateTime GetLastSyncDateTime(string pThrowboxId);
 
+        // CRUD - individual items / flags
+        void SaveItem(Item pItem);
+        void SaveFlag(RemoveFlag pFlag);
+        void DeleteItem(RemoveFlag pFlag);
     }
 
     public class LocalDBHandler : ILocalDBHandler
     {
         SQLiteAsyncConnection connection;
-       // ObservableCollection<Item> receivedMessages;
-       // ObservableCollection<Item> sentMessages;
-       // ObservableCollection<Item> data;
         string nodeId = NodeData.GetNodeId();
 
+        SyncLog log;
 
         public LocalDBHandler()
         {
             connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
 
+        // methods used for syncing
+        public List<Item> GetAllItems()
+        {
+            var result = connection.Table<Item>().ToListAsync().Result;
+            return result;
+        }
+
+        public List<RemoveFlag> GetAllFlags()
+        {
+            var result = connection.Table<RemoveFlag>().ToListAsync().Result;
+            return result;
+        }
+
+
+        // methods used for displaying in mobile app
+
+        public ObservableCollection<Item> GetData()
+        {
+            var result = connection.Table<Item>().Where(t => t.ItemType.Equals("DATA")).ToListAsync().Result;
+            return new ObservableCollection<Item>(result);
+        }
+
+        public ObservableCollection<Item> GetReceivedMessages()
+        {
+            var table = connection.Table<Item>();
+            var result = table.Where(t => t.ItemType.Equals("MESSAGE") &&
+                                                        t.RecipientId.Equals(nodeId)).ToListAsync().Result;
+            return new ObservableCollection<Item>(result);
+        }
+
+        public ObservableCollection<Item> GetSentMessages()
+        {
+            var table = connection.Table<Item>();
+            var result = table.Where(t => t.ItemType.Equals("MESSAGE") && 
+                                                        t.OriginatorId.Equals(nodeId)).ToListAsync().Result;
+            return new ObservableCollection<Item>(result);
+        }
+
+        // logging methods
+
+        public void LogSyncStarted()
+        {
+            log = new SyncLog(NodeData.GetNodeId(), DateTime.Now);
+            connection.InsertAsync(log);
+        }
+
+        public void LogSyncComplete()
+        {
+            log.SetDateTimeComplete(DateTime.Now);
+            connection.UpdateAsync(log);
+        }
+
+        public DateTime GetLastSyncDateTime(string pThrowboxId)
+        {
+            var table = connection.Table<SyncLog>();
+            var syncList = table.Where(x => x.SyncNodeId.Equals(pThrowboxId)).OrderByDescending(x => x.DateTimeComplete).ToListAsync().Result;
+            if (syncList.Count > 0)
+            {
+                return syncList[0].DateTimeStart;
+            }
+            else
+            {
+                return new DateTime(2000, 1, 1);
+            }
+        }
+
+        // Individual CRUD methods
+
+
+        public async void SaveItem(Item pItem)
+        {
+            await connection.InsertOrReplaceAsync(pItem);
+        }
+
+        public async void SaveFlag(RemoveFlag pFlag)
+        {
+            await connection.InsertOrReplaceAsync(pFlag);
+        }
+
+        public async void DeleteItem(RemoveFlag pFlag)
+        {
+
+            //await connection.DeleteAsync(item);
+            throw new NotImplementedException();
+        }
+
+        // database creation
+
+
         public async static void CreateDatabaseIfNeeded()
         {
             SQLiteAsyncConnection connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+            //await connection.DropTableAsync<Item>();
+            //await connection.DropTableAsync<RemoveFlag>();
+            //await connection.DropTableAsync<TransferLog>();
+            //await connection.DropTableAsync<SyncLog>();
+
+
             await connection.CreateTableAsync<Item>();
             await connection.CreateTableAsync<RemoveFlag>();
             await connection.CreateTableAsync<TransferLog>();
             await connection.CreateTableAsync<SyncLog>();
 
             if (!Application.Current.Properties.ContainsKey("sequence"))
-            { Application.Current.Properties["sequence"] = 1; } 
+            { Application.Current.Properties["sequence"] = 1; }
 
-            await connection.ExecuteAsync("delete from item");
-
-        }
-
-        public void DeleteItem(Item pItem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ObservableCollection<Item> GetData()
-        {
-            {
-                var result = connection.Table<Item>().Where(t => t.ItemType.Equals("DATA")).ToListAsync().Result;
-                return new ObservableCollection<Item>(result);
-            }
-        }
-
-        public Item GetItemById(string pItemId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<string> GetItemIdsToPull(List<Item> pInputList)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<string> GetItemIdsToPush(List<Item> pInputList)
-        {
-            throw new NotImplementedException();
-        }
-
-        public DateTime GetLastSync(string pThrowboxId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ObservableCollection<Item> GetReceivedMessages()
-        {
-            var result = connection.Table<Item>().Where(t => t.ItemType.Equals("MESSAGE") && 
-                                                        t.RecipientId.Equals(nodeId)).ToListAsync().Result;
-            return new ObservableCollection<Item>(result);
-        }
-
-        public RemoveFlag GetRemoveFlagById(string pFlagId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<string> GetRemoveFlagIdsToPull(List<RemoveFlag> pInputList)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<string> GetRemoveFlagIdsToPush(List<RemoveFlag> pInputList)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ObservableCollection<Item> GetSentMessages()
-        {
-            var result = connection.Table<Item>().Where(t => t.ItemType.Equals("MESSAGE") && 
-                                                        t.OriginatorId.Equals(nodeId)).ToListAsync().Result;
-            return new ObservableCollection<Item>(result);
-        }
-
-        public void LogSyncComplete()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void LogSyncStarted()
-        {
-            throw new NotImplementedException();
-        }
-
-        public async void SaveItem(Item pItem)
-        {
-            await connection.InsertAsync(pItem);
-        }
-
-        public void SaveRemoveFlag(RemoveFlag pFlag)
-        {
-            throw new NotImplementedException();
+            // TODO LocalDBHandler : this clears out existing items
+            //await connection.ExecuteAsync("delete from item");
         }
     }
 }

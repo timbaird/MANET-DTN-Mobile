@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage    Title="API Test View"
+                xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                x:Class="MANET_DTN_Mobile.Views.APITestView">
+
+    <Label x:Name="output"> </Label>
+
+
+    <!--      
+    <ListView x:Name="ListViewData">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+
+                    <TextCell Text="{Binding Path=OriginatorId, StringFormat='Creator:   {0}'}"
+                    Detail="{Binding Path=Title, StringFormat='Title:    {0}'}" />
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    -->
+</ContentPage>

@@ -1,5 +1,7 @@
 ﻿using Xamarin.Forms;
 using MANET_DTN_Mobile.DataAccess;
+using MANET_DTN_Mobile.Views;
+using MANET_DTN_Mobile.Controllers;
 
 namespace MANET_DTN_Mobile
 {
@@ -8,6 +10,11 @@ namespace MANET_DTN_Mobile
         public App()
         {
             InitializeComponent();
+
+            var service = DependencyService.Get<IWiFiConnectionService>();
+            service.SetAlarm();
+
+            //MainPage = new APITestView();
 
             MainPage = new NavigationPage(new MainMenuView());
         }

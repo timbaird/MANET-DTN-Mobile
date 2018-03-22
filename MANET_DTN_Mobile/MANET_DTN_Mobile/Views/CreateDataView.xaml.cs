@@ -24,7 +24,7 @@ namespace MANET_DTN_Mobile.Views
 
                 var db = new LocalDBHandler();
                 var vItem = new Item(nodeId + "-" + vNextVal, "DATA",
-                                    nodeId, null, entryTitle.Text,
+                                    nodeId, "none", entryTitle.Text,
                                    editorData.Text, DateTime.Now, "NORMAL");
 
                 db.SaveItem(vItem);

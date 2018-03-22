@@ -29,3 +29,8 @@
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/SQLite-net.xml
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.DataDetailView.xaml.g.cs
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.MessageDetailsView.xaml.g.cs
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/ModernHttpClient.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/ModernHttpClient.dll.mdb
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.APITestView.xaml.g.cs
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/Newtonsoft.Json.dll
+/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/Newtonsoft.Json.xml
