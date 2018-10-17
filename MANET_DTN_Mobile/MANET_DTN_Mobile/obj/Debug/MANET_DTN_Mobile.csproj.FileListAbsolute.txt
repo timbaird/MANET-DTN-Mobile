@@ -34,3 +34,37 @@
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/obj/Debug/MANET_DTN_Mobile.Views.APITestView.xaml.g.cs
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/Newtonsoft.Json.dll
 /Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DTN_Mobile/bin/Debug/Newtonsoft.Json.xml
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\MANET_DTN_Mobile.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\MANET_DTN_Mobile.pdb
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\ModernHttpClient.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\SQLite-net.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\SQLite-net.pdb
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\SQLite-net.xml
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.csprojAssemblyReference.cache
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.csproj.CoreCompileInputs.cache
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.App.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.MainMenuView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.InboxView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.SentMessagesView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.DataView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.CreateMessageView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.CreateDataView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.DataDetailView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.MessageDetailsView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.Views.APITestView.xaml.g.cs
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.csproj.CopyComplete
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.dll
+C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\MANET_DTN_Mobile\obj\Debug\MANET_DTN_Mobile.pdb
