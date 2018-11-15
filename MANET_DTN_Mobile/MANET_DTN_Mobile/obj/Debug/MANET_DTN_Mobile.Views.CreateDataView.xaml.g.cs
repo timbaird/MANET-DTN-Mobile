@@ -11,8 +11,8 @@
 namespace MANET_DTN_Mobile.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Volumes/Magnus Servio/Users/tim/Repos/MANET-DTN-Mobile/MANET_DTN_Mobile/MANET_DT" +
-        "N_Mobile/Views/CreateDataView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\tim\\source\\repos\\MANET-DTN-Mobile\\MANET_DTN_Mobile\\MANET_DTN_Mobile\\View" +
+        "s\\CreateDataView.xaml")]
     public partial class CreateDataView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

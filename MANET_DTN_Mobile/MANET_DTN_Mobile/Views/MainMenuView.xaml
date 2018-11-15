@@ -5,6 +5,7 @@
                 xmlns:local="clr-namespace:MANET_DTN_Mobile" 
                 x:Class="MANET_DTN_Mobile.MainMenuView">
     <StackLayout>
+        <Button Text="Check SSID" Clicked="Handle_Button_Check_SSID_Clicked"/>
         <Button Text="Inbox" Clicked="Handle_Button_Inbox_Clicked"/>
         <Button Text="Sent Messages" Clicked="Handle_Button_Sent_Messages_Clicked"/>
         <Button Text="New Message" Clicked="Handle_Button_New_Message_Clicked"/>

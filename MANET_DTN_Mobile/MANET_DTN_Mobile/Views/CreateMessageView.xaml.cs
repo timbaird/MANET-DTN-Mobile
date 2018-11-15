@@ -22,10 +22,11 @@ namespace MANET_DTN_Mobile.Views
                 var vNextVal = NodeData.SequenceNextVal();
 
                 var db = new LocalDBHandler();
+
                 var vItem = new Item(nodeId + "-" + vNextVal, "MESSAGE",
                                     nodeId, entryRecipient.Text, entrySubject.Text,
-                                   editorMessage.Text, DateTime.Now, "NORMAL");
-                
+                                    editorMessage.Text, DateTime.Now, "NORMAL");
+
                 db.SaveItem(vItem);
 
                 DisplayAlert("Success", "Message Sent", "OK");

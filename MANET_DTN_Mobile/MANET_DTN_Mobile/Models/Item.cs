@@ -5,7 +5,7 @@ namespace MANET_DTN_Mobile.Models
 {
     public class Item
     {
-        [PrimaryKey, Column("ItemId"), MaxLength(30)]
+       // [PrimaryKey, Column("ItemId"), MaxLength(30)]
         public string ItemId { set; get; }
         [MaxLength(7)]
         public string ItemType { set; get; }
@@ -23,20 +23,8 @@ namespace MANET_DTN_Mobile.Models
 
         public Item(){}
 
-        public Item(string pItemType, string pOriginatorId, string pRecipientId, string pTitle, string pBody, 
-                    DateTime pDateTimeCreated, string pPriority){
-            ItemId = null;
-            ItemType = pItemType;
-            OriginatorId = pOriginatorId;
-            RecipientId = pRecipientId;
-            Title = pTitle;
-            Body = pBody;
-            DateTimeCreated = pDateTimeCreated;
-            Priority = pPriority;
-        }
-
-        public Item(string pItemId, string pItemType, string pOriginatorId, string pRecipientId, string pTitle, string pBody,
-                    DateTime pDateTimeCreated, string pPriority){
+        public Item(string pItemId, string pItemType, string pOriginatorId, string pRecipientId,
+                    string pTitle, string pBody, DateTime pDateTimeCreated, string pPriority){
             ItemId = pItemId;
             ItemType = pItemType;
             OriginatorId = pOriginatorId;
@@ -49,13 +37,38 @@ namespace MANET_DTN_Mobile.Models
 
         public string ToJson()
         {
-            // return string.Format("[Item: ItemId={0}, ItemType={1}, OriginatorId={2}, RecipientId={3}, Title={4}, Body={5}, DateTimeCreated={6}, Priority={7}]", ItemId, ItemType, OriginatorId, RecipientId, Title, Body, DateTimeCreated, Priority);
-            var serialised = string.Format("'ItemId':'{0}', 'ItemType':'{1}', 'OriginatorId':'{2}'," +
-                                           " 'RecipientId':'{3}', 'Title':'{4}', 'Body':'{5}', 'DateTimeCreated':'{6}', 'Priority':'{7}'",
-                                           ItemId, ItemType, OriginatorId, RecipientId, Title, Body, DateTimeCreated, Priority);
+            string serialised;
+
+            if (ItemType == "MESSAGE")
+            {
+                serialised   = "{'ItemID': '" + ItemId + "'," +
+                             "'ItemType': '" + ItemType + "'," +
+                             "'PriorityLevel': '" + Priority + "'," +
+                             "'OriginatorID': '" + OriginatorId + "'," +
+                             "'RecipientID': '" + RecipientId + "'," +
+                             "'TransFromID': null," +
+                             "'Title': '" + Title + "'," +
+                             "'Body': '" + Body + "'," +
+                             "'DateTimeCreated': '" + DateTimeCreated + "'}";
+            }
+            else
+            {
+                serialised = "{'ItemID': '" + ItemId + "'," +
+                             "'ItemType': '" + ItemType + "'," +
+                             "'PriorityLevel': '" + Priority + "'," +
+                             "'OriginatorID': '" + OriginatorId + "'," +
+                             "'RecipientID': null," +
+                             "'TransFromID': null," +
+                             "'Title': '" + Title + "'," +
+                             "'Body': '" + Body + "'," +
+                             "'DateTimeCreated': '" + DateTimeCreated + "'}";
+            }
 
 
-            return "{" + serialised + "}";
+
+ 
+
+            return serialised;
         }
     }
 }

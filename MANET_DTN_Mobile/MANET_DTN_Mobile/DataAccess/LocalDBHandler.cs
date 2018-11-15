@@ -126,7 +126,7 @@ namespace MANET_DTN_Mobile.DataAccess
         {
 
             //await connection.DeleteAsync(item);
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         // database creation

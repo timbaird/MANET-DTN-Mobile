@@ -5,7 +5,7 @@
                 x:Class="MANET_DTN_Mobile.Views.MessageDetailsView">
     <StackLayout>
     <Label Text="{Binding Path=RecipientId, StringFormat='Recipient:   {0}'}"/>  
-    <Label Text="{Binding Path=OriginatorId, StringFormat='Sender:   {0}'}"/> 
+    <Label Text="{Binding Path=ItemId, StringFormat='ItemID:   {0}'}"/> 
     <Label Text="{Binding Path=DateTimeCreated, StringFormat='Sent Date:   {0}'}"/>   
     <Label Text="{Binding Path=Title, StringFormat='Subject:   {0}'}"/> 
     <Label Text="{Binding Path=Body, StringFormat='Message:   {0}'}"/>  

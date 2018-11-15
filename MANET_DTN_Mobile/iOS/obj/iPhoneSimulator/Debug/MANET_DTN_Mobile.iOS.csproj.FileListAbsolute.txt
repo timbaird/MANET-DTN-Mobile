@@ -137,4 +137,3 @@ C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\iOS\obj\iPhoneSimula
 C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\iOS\obj\iPhoneSimulator\Debug\MANET_DTN_Mobile.iOS.csproj.CopyComplete
 C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\iOS\obj\iPhoneSimulator\Debug\MANET_DTN_Mobile.iOS.exe
 C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\iOS\obj\iPhoneSimulator\Debug\MANET_DTN_Mobile.iOS.pdb
-C:\Users\tim\source\repos\MANET-DTN-Mobile\MANET_DTN_Mobile\iOS\bin\iPhoneSimulator\Debug\MANET_DTN_Mobile.dll.mdb

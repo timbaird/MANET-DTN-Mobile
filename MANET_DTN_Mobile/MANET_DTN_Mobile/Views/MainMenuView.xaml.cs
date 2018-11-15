@@ -34,5 +34,10 @@ namespace MANET_DTN_Mobile
         {
             await Navigation.PushAsync(new CreateDataView());
         }
+
+        async private void Handle_Button_Check_SSID_Clicked(object sender, System.EventArgs e)
+        {
+            await DisplayAlert("SSID", "Test" , "OK");
+        }
     }
 }
